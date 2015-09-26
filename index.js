@@ -1,6 +1,7 @@
 //Most for use with gyre
 /*
-
+git remote add origin https://github.com/hollowdoor/more_events.git
+git push -u origin master
 */
 function MoreEvents(){
     this.listeners = {};
@@ -22,14 +23,15 @@ MoreEvents.prototype = {
         return this.on(event, onceListener);
     },
     emit: function(event){
-        if(this.listeners[event] === undefined)
+        if(this.listeners[event] === undefined || !this.listeners[event].length)
             return this;
+
         var args = Array.prototype.slice.call(arguments, 1),
             canRun = this.listeners[event].length;
 
-        while(--canRun){
-            this.listeners[event][canRun].apply(this, args);
-        }
+        do{
+            this.listeners[event][--canRun].apply(this, args);
+        }while(canRun);
 
         return this;
     },
