@@ -1,6 +1,6 @@
 {
   "name": "more-events",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Another emitter sigh.",
   "main": "index.js",
   "scripts": {
