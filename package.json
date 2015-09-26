@@ -1,0 +1,15 @@
+{
+  "name": "more-events",
+  "version": "1.0.0",
+  "description": "Another emitter sigh.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "emitter",
+    "events"
+  ],
+  "author": "Quentin Engles <hollowdoor99@gmail.com>",
+  "license": "MIT"
+}
