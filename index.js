@@ -3,8 +3,9 @@
 git remote add origin https://github.com/hollowdoor/more_events.git
 git push -u origin master
 */
-function MoreEvents(){
+function MoreEvents(context){
     this.listeners = {};
+    this.__context = context || this;
 }
 
 MoreEvents.prototype = {
@@ -30,7 +31,7 @@ MoreEvents.prototype = {
             canRun = this.listeners[event].length;
 
         do{
-            this.listeners[event][--canRun].apply(this, args);
+            this.listeners[event][--canRun].apply(this.__context, args);
         }while(canRun);
 
         return this;

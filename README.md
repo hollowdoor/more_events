@@ -18,6 +18,18 @@ Another event emitter with the usual methods.
 
 Listeners are emitted backwards so don't expect the order of emits to play nice.
 
+Set the context if you want.
+----------------------------
+
+```javascript
+var Emitter = require('more-events').Emitter;
+function MyClass(){
+    this.emitter = new Emitter(this /*A different context for listeners*/);
+}
+```
+
+Otherwise the emitter uses it's own context.
+
 Why?
 ----
 
