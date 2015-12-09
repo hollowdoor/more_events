@@ -24,7 +24,7 @@ MoreEvents.prototype = {
         return this.on(event, onceListener);
     },
     emit: function(event){
-        if(this.listeners[event] === undefined || !this.listeners[event].length)
+        if(typeof this.listeners[event] === 'undefined' || !this.listeners[event].length)
             return this;
 
         var args = Array.prototype.slice.call(arguments, 1),
