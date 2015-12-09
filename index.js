@@ -37,13 +37,11 @@ MoreEvents.prototype = {
         return this;
     },
     off: function(event, listener){
-        var current, index = this.listeners[event].length;
-        while(current = this.listeners[event][--index]){
-            if(current === listener){
-                this.listeners[event].splice(index);
-                return this;
-            }
-        }
+        if(this.listeners[event] === undefined || !this.listeners[event].length)
+            return this;
+        this.listeners[event] = this.listeners[event].filter(function(item){
+            return item !== listener;
+        });
         return this;
     }
 };
