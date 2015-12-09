@@ -43,6 +43,11 @@ MoreEvents.prototype = {
             return item !== listener;
         });
         return this;
+    },
+    dispose: function(){
+        for(var n in this){
+            this[n] = null;
+        }
     }
 };
 

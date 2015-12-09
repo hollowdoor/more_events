@@ -30,6 +30,11 @@ function MyClass(){
 
 Otherwise the emitter uses it's own context.
 
+emitter.dispose()
+-----------------
+
+Destroy the object when you don't need it any more. Good for memory management.
+
 Why?
 ----
 
