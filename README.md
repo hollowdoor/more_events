@@ -24,6 +24,21 @@ Set a listener like with `emitter.on()` except `matchListener` will be used to f
 
 The default for `matchListener` is null, and if it is null `listener` will be used for removal.
 
+### emitter.clear(name)
+
+Remove all listeners on the given event name using `emitter.clear(name)`.
+
+Other methods/properties to be aware of:
+-----------------------------------
+
+* removeListener()
+* emitListeners()
+* removeAll()
+
+### emitter.listeners
+
+`emitter.listeners` is object where listeners are stored.
+
 Set the context if you want.
 ----------------------------
 
