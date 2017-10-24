@@ -1,6 +1,6 @@
 {
   "name": "more-events",
-  "version": "1.3.2",
+  "version": "2.0.0",
   "description": "A lightweight event emitter",
   "main": "dist/bundle.js",
   "scripts": {
